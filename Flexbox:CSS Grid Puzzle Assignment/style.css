@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+.box {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.puzzle {
+    display: grid;
+    gap: 0;
+    justify-content: center;
+}
+
+.puzzle img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+
+.puzzle1 {
+    grid-template-columns: repeat(5, 100px);
+}
+
+.puzzle2 {
+    grid-template-columns: repeat(4, 100px);
+}
+
+.puzzle3 {
+    grid-template-columns: repeat(5, 100px);
+}
