@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f6ff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #1f2a44;
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 70%;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #1f2a44;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* zebra rows (pseudo-class) */
+tr:nth-child(even) {
+  background-color: #f7f9ff;
+}
+
+/* hover effect (pseudo-class) */
+tr:hover {
+  background-color: #dbe7ff;
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+/* first column styling */
+td:first-child {
+  font-weight: bold;
+  color: #1f2a44;
+}
