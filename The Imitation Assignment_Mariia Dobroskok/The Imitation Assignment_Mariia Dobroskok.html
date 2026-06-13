@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Image Project</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+    padding:20px;
+    background:#f0f0f0;
+}
+
+img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:10px;
+}
+
+/* 1. Black & White Butterfly */
+.img1{
+    filter:grayscale(100%);
+}
+
+/* 2. Sepia Dinosaur */
+.img2{
+    filter:sepia(100%) saturate(250%);
+}
+
+/* 3. Blurred Penguins */
+.img3{
+    filter:blur(5px);
+}
+
+/* 4. High Contrast Seagull */
+.img4{
+    filter:contrast(250%);
+}
+
+/* 5. Football Field + Tic-Tac-Toe Overlay */
+.field{
+    position:relative;
+    width:100%;
+}
+
+.field img{
+    width:100%;
+    display:block;
+}
+
+.field::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background-image:url("tic-tac-toe.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:70%;
+
+    opacity:0.8;
+}
+
+/* 6. Bright Stage */
+.img6{
+    filter:brightness(130%);
+    transform:scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<img class="img1" src="butterfly.jpg" alt="Butterfly">
+
+<img class="img2" src="dinosaur.png" alt="Dinosaur">
+
+<img class="img3" src="penguins.jpg" alt="Penguins">
+
+<img class="img4" src="seagull.png" alt="Seagull">
+
+<div class="field">
+    <img src="football_field.jpg" alt="Football Field">
+</div>
+
+<img class="img6" src="theater_stage.jpg" alt="Theater Stage">
+
+</body>
+</html>
